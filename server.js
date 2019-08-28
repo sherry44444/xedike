@@ -4,13 +4,13 @@ require("dotenv").config();
 const userRouter = require("./routes/api/user/index");
 const tripRouter = require("./routes/api/trip/index");
 
-const mongoUri =
-  process.env.NODE_ENV === "dev"
-    ? process.env.MONGO_URI_DEV
-    : process.env.MONGO_URI_PROD;
+// const mongoUri =
+//   process.env.NODE_ENV === "dev"
+//     ? process.env.MONGO_URI_DEV
+//     : process.env.MONGO_URI_PROD;
 
 mongoose
-  .connect(mongoUri, {
+  .connect("mongodb://localhost:27017/xedike", {
     useNewUrlParser: true,
     useCreateIndex: true
   })
