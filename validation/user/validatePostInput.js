@@ -37,11 +37,11 @@ const validatePostInput = async data => {
   }
 
   //DOB
-  if (validator.isEmpty(data.DOB)) {
-    errors.DOB = "day of birth is required";
-  } else if (!_.isDate(data.DOB)) {
-    errors.DOB = "invalid day of birth";
-  }
+  // if (validator.isEmpty(data.DOB)) {
+  //   errors.DOB = "day of birth is required";
+  // } else if (!_.isDate(data.DOB)) {
+  //   errors.DOB = "invalid day of birth";
+  // }
 
   //userType
   if (validator.isEmpty(data.userType)) {
